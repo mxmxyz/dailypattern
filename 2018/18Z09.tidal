@@ -1,0 +1,40 @@
+d1 
+$ superimpose (
+    (#pan (density 141 $ sine))
+    .
+    (slowspread slow [2,3])
+    . 
+    (#resonance "0.2")
+    .
+    (superimpose (
+        (slow 1)
+        .
+        (#gain "0.3")
+        .
+        (#sustain "0.45")
+        .
+        (|+|note "12")
+        .
+        (#resonance "1")
+    ))
+)
+$ slowcat [
+note "{36 39 48 36 43 36 36 39 48 43 36 55}%16"
+,
+note "{36 39 49 36 43 36 37 39 48 44 36 55}%16"
+,
+note "{36 39 48 36 43 36 36 39 48 43 36 55}%16"
+,
+note "{41 43 48 60 43 41 53 51 48 43 41}%16"
+]
+#s "supersquare" 
+#sustain "{0.17 0.1 0.1 0.14 0.1 0.1 0.1}%16" 
+#shape (density 131 $ "0.5 0.2 0.5 0.5 0.5 0.5 0.3 0.7")
+#cutoff "{2 5 16 32 32 24 8 14 12 6 32 32 24 32 16 13 9 16 8 4}%16"
+#resonance "0.35"
+#gain "0.35"
+#pan (density 141 $ sine)
+
+setcps 0.6
+
+hush

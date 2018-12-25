@@ -1,3 +1,5 @@
+setcps 0.2
+
 d1 $ degradeBy 0.15
  $ rarely (|+|note "-5")
  $ superimpose ((slow 4) . (|+|note "{0 -12}%29") . (|+| sustain "0.05") .
@@ -8,5 +10,3 @@ $ note "{[77 80]*8 44 56 80 ~ 80 80  ~ 49 58 ~ 20 ~ [80 84]*8 89 ~ ~ 27 63 61 ~ 
 #sustain "{0.05 0.01 0.05 0.02 0.03}%16"
 #pan (density 11179 $ sine)
 #detune "{0.995 1 1.005 }%4413"
-
-setcps 0.2
