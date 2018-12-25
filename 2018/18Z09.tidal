@@ -6,7 +6,7 @@ $ superimpose (
     . 
     (#resonance "0.2")
     .
-    (superimpose (
+    (off 2 (
         (slow 1)
         .
         (#gain "0.3")
