@@ -1,0 +1,18 @@
+setcps 0.5
+
+d1
+$note "{10}%1" #s "bandsquare"
+#sustain "0.8"
+#cutoff "92"
+#resonance "0.35"
+#decay "0.54"
+#gain "256"
+
+d2 $ slow 3
+$stripe 8
+$note "{60 [61 61 121 61 91 91 91]/7 [30 37]/2}%16" #s "supersquare"
+#sustain "0.035"
+#gain "1"	
+#cutoff "256"
+#resonance "8"
+#pan (density 1141 $ sine)

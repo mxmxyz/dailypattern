@@ -1,0 +1,50 @@
+setcps 0.95
+
+d1
+$sometimesBy 1 (#decay "{0.1 0.2 0.5 0.5 0.5}%1")
+$degradeBy 0 $
+    off 1 (
+    (|+|note "24")
+    .
+    (#pan (slow 2 "-1 1"))
+    .
+    (superimpose
+        (fast 2)
+        .
+        (someCyclesBy 0.2 (fast 2))
+        .
+        (someCyclesBy 0.25 (|+|note "12"))
+        .
+        (#gain "0.2")
+    )
+) 
+$someCyclesBy 0.2 (density 3)
+$note "{30 37 42 35 30 37 40 54 33}%1" #s "bandsquare"
+#sustain "1.8" 
+#gain "0.4"
+#pan (slow 2 "1 -1")
+#shape "0.7"
+#cutoff "24"
+#resonance "2.8"
+#decay "{0.8}%1"
+
+d2 $ 
+note "42" #s "bandsquare"
+#cutoff "32"
+#resonance "0.9"
+#gain "1"
+#sustain "2" 
+#pan (slow 2 "1 -1")
+#shape "0.5"
+#decay "1.2"
+
+d3
+$someCyclesBy 0.933 (degradeBy 1)
+$off 0 (
+    (#detune "1.02")
+    .
+    (off 0 (#detune "0.98"))
+)
+$note "78 85 90" #s "supersaw"
+#sustain "6"
+#gain "0.04"

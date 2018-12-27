@@ -1,0 +1,34 @@
+setcps (2/3)
+
+d1
+$ off 0.002 (#pan "1")
+$ stack [
+note "{36(3,8)}%2"
+,
+note "{55(5,9)}%1"
+]
+# s "supersquare"
+# shape "0.7"
+# cutoff "8"
+# resonance "0.8"
+# sustain "0.3"
+# pan "0"
+# decay "0.2"
+# gain "0.35"
+
+let pat = "{0.2 0.2 0.2 0.2 0.8 0.2 0.3}%16"
+in
+d2
+$ every 4 (#cutoff "32 16")
+$ note "{48 51 48 55 48 51 60}%16"
+--$ note "{48 51 48 55 60 62 63}%16"
+# s "supersquare"
+# shape "0.5"
+# cutoff "16"
+# resonance "0.5"
+# sustain pat
+# pan (density 1411 $ sine)
+# decay pat
+# gain "0.25"
+
+hush
