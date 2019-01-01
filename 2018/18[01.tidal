@@ -1,0 +1,25 @@
+d3 $ slow 8 $ cps "{0.2 1.4}%1"
+
+d1
+$ superimpose (#note "9")
+$ slow 1
+$ note "{9 40 45 47 64 76? 16 21 9 9}%2" #s "bandsquare"
+# sustain "7.8"
+# cutoff "2560"
+# resonance "0.15"
+# decay "1.54"
+# gain "32"
+
+d2 
+$ off 0.5 (#s "supersaw")
+$ degradeBy 0.4
+$ spaceOut [2, 0.75, 0.5] 
+$ slow 12
+$ stripe 16
+$ note "{30 35 30 60 6 8 [61 61 121 30 61 91 91 91]/7 [30 37]/2}%16" #s "supersquare"
+# sustain "2.795"
+# gain "7.8"	
+# cutoff "64"
+# resonance "3.65"
+# decay "1.5"
+# pan (density 1141 $ sine)
