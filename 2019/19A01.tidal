@@ -1,0 +1,8 @@
+setcps 0.65
+
+d1 $ shape "512 4096 2048" #s "convolve1" 
+#note "{36 36 24 36 24 36 36 36 36 36 36 36 36 36 48}%3"
+#gain "0.8" 
+#cutoff (fast 3 $ rangex 1 8 $ rand)
+#resonance (slow 4 $ listToPat ([0.3..0.05] ++ [0.1..0.25]))
+#sustain "1.2"

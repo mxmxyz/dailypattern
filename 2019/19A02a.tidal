@@ -1,0 +1,8 @@
+setcps 1.65
+
+d1 $ note "{55 81 74 58 60 62}%7" #s "pokepulse"
+#tremolorate"0.25"
+#tremolodepth "0.25"
+#phaserrate"0.5"
+#phaserdepth"0.5"
+#decay "0.06 0.2"
