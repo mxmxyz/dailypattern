@@ -1,0 +1,29 @@
+setcps 0.02
+
+d3
+$ superimpose ((# pan "1") . (fast 1.001))
+$ stutWith  8 (1/32) (|+| note "3 -2")
+$ every 1 (|-| (slow 4 $ note "{12 0 -12}%16"))
+$ whenmod 8 1 (|+| sustain "0.2")
+$ note "{55 62 79 82 84 86 67 5 46 58}%64"
+# s "supersaw"
+# gain "0.9"
+# sustain "{0.01 0.1 2.01 0.01 0.45 0.02 0.01 0.01 0.1}%64"
+# pan (fast 1 $ range 0 0 $ rand)
+# detune (
+fast
+    (fast 0.33 $ range 0.02 1 $ sine) 
+$ range 0.27 1.33 $ saw)
+
+d4 
+$ slow (1/4)
+$ note "20"
+# s "bandsquare"
+# pan "0.5"
+# sustain "8"
+# shape "0.65"
+# cutoff "64"
+# resonance "0.1"
+# decay "1"
+# gain "2"
+

@@ -1,0 +1,38 @@
+d3 $ cps "{0.24 0.12 0.12}%1"
+
+
+d1
+$ linger (fast 131 $ range 0.125 1 $ sine)
+$ whenmod 4 3 (|+| decay "0.075")
+$ superimpose ((# pan "0") . (fast 1.0002))
+$ off (1/64)
+    (off (1/4)
+        (off (1/64)
+        (# decay "0.14")
+    )
+)
+$ note "{48 60 8 91*2 8 48*4 50 [48 97] 48 60 55}%8"
+# s "pokepulse"
+# decay "0.04"
+# tremolorate (fast 1 ("{0.1 0.5 0.25}%1"))
+# tremolodepth "0.005"
+# phaserrate "0.095"
+# phaserdepth "0.025"
+# pan "1"
+# coarse "{2 8 11 0 0 100 0 0 0 }%8"
+# gain "0.6"
+
+d2 
+$ fast 4
+$ whenmod 7 6 (fast 8)
+$ slow 4
+$ note "{36 36 36 36 24}%4"
+# s "pokepulse"
+# decay "{0.4 0.28 0.28 0.28}%4"
+# tremolorate (fast 1 ("{0.5}%1"))
+# tremolodepth "0.025"
+# phaserrate "0.5"
+# phaserdepth "0.25"
+# pan "0.5"
+# coarse "{0 0 0 0 }%8"
+# gain "1.5"
