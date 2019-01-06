@@ -1,0 +1,14 @@
+setcps 0.065
+
+d1
+$ trunc 1
+$ fast 32
+$ whenmod 8 5 (# gain "1")
+$ slow 32
+$ stutWith (fast 1 $ run 8) (1/12) (|+ note "{12 12 12 24}%64")
+$ every 1 (|-| (fast 2 $ note "{12 12 36 0}%1"))
+$ note "{51 31 48 32 [67 79 67 67]/4 50 41 50 24 36*2 48 51 50}%64"
+# s "supersaw"
+# sustain (fast 4 $ "{0.125 0.075 0.125 0.05}%1")
+# gain "0.65"
+# pan (fast 64 $ rand)

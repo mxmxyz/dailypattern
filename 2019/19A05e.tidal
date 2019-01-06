@@ -1,0 +1,13 @@
+setcps 4.15
+
+d2
+$ degradeBy 0.10
+$ spaceOut ([0.2,0.25..4] ++ [8,8,8,6,4,2])
+$ off (fast (1/2) $ range 0 1 $ sine) (#pan "1")
+$ fast (16/4)
+$ every 4 (fast 2)
+$ sound "hardkick:8(4,8)"
+# shape "{0.999 0.95 0.2 0.6 0.999}%4"
+# gain "1.95"
+# speed "1.05"
+# pan "0"
