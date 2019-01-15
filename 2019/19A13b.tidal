@@ -1,0 +1,35 @@
+setcps 0.14
+
+d1
+$ slow (2*1*1)
+$ spaceOut [1,1]
+$ stutWith 18 (1/(8*8*4)) (
+(|+ gain "0.02")
+.
+(|* decay (fast 1.1 $ choose [1.2,1.05,1.1]))
+.
+(|+ note (fast 1.21 $ choose [2.11, 1.02, 1.21, 1.85]))
+.
+(|* sustain (choose [0.99, 0.94, 1.01]))
+.
+(|+ pan (range (-0.15) 0.15 $ rand))
+)
+$ note "{24*4 57 62 65*2 55 60}%16"
+# s "{supersquare supersquare supersquare supersquare}%4"
+# sustain "0.24"
+# decay "0.17"
+# cutoff "16"
+# resonance "2.24"
+# pan (fast 131 $ rand)
+# gain "1.72"
+
+d2
+$ fast 8
+$ sound "hardkick:2"
+# speed "0.95"
+# shape "0.96"
+# gain "2"
+
+hush
+
+d1 silence

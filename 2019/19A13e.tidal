@@ -1,0 +1,23 @@
+setcps 0.25
+
+d1
+$ fast 4 
+$ whenmod 7 7 (#cut "{1 2 1 2 3}%337")
+$ slow (8*8*1)
+$ stutWith 5 (1/192) 
+(
+    (|+ note "{12 0 7 7}%341")
+    . 
+    (|* sustain (choose [0.99, 0.8, 1.0, 0.6]))
+.
+(|*| decay "0.99")
+)
+$ note "{57*6 42*4 57*4 52*6 74*4 38*4}%32"
+# s "supersquare" 
+# cutoff "10"
+# decay "0.02"
+# resonance "0.912"
+# sustain "{2.45}%64"
+# gain "0.725"
+# pan (fast (131) $ rand)
+# detune (fast 1317 $ range 0.990 1.015 $ rand)

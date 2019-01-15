@@ -1,0 +1,16 @@
+setcps 0.25
+
+d1
+$ slow 4
+$ stutWith 7 (1/192) 
+(
+    (|+| note "7")
+    . 
+    (|*| sustain "0.85")
+)
+$ note "{57 42 50 52 74 38 45}%32"
+# s "supersaw" 
+# sustain "{0.25 0.25 0.25 0.25 0.25 1.75}%16"
+# gain "0.75"
+# pan (fast (131) $ rand)
+# detune (fast 1317 $ range 0.995 1.005 $ rand)

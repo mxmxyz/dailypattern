@@ -1,0 +1,15 @@
+setcps 0.2
+
+d1
+$ stutWith 8 (1/8)
+(
+	(|+| gain "0.05")
+	.
+	(|*| sustain "0.95")
+	.
+	(|* note (slow 4 $ range 1 1.15 $ saw))
+)
+$ note "{48*4 51*3 19*4 53*2 55 60*2 72 70}%16"
+# s "supersaw"
+# sustain "0.050"
+# gain "0.25"

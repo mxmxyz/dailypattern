@@ -1,0 +1,21 @@
+setcps 0.25
+
+d1
+$ fast 4
+$ whenmod 7 6 (#cut "{1}%131")
+$ slow (4*4)
+$ stutWith 8 (1/(64*3))
+(
+	(|+| gain "0.00")
+	.
+	(|*| sustain "0.8")
+	.
+	(|+| note "7")
+)
+$ note "{47*3 [38 26]*2 72*6 52*3 60*6 55*4 52*3}%16"
+# s "supersaw"
+# sustain "{0.050 0.15 0.05 0.1 0.05 0.05 0.25}%32"
+# gain "0.65"
+# cut "0"
+# pan (fast 131 $ range 0 1 $  rand)
+# detune (fast 13111 $ range 0.99 1.01 $ rand)

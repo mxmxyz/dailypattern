@@ -1,0 +1,18 @@
+setcps 0.95
+
+d1
+$ whenmod 8 3 (# cut "1")
+$ spaceOut ([0.6] ++ (replicate 16 0.3) ++ (replicate 16 0.15))
+$ slow 4
+$ stutWith 6 (1/8) 
+(
+    (|+| note "7")
+    . 
+    (|+| gain "1.05")
+)
+$ note "{2 9 100}%16"
+# s "supersaw" 
+# sustain "{0.058}%16"
+# gain "1"
+# pan (fast 1315 $ rand)
+# detune (fast 1317 $ range 1.5 (slow (1) $ range 8 16 $ sine) $ rand)
