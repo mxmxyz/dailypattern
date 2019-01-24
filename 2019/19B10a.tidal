@@ -1,0 +1,21 @@
+import Sound.Tidal.Guiot.Control
+
+setcps 0.2
+
+d1
+$ slow 2 
+$ stutWith 60 (1/32)
+(
+(|+ note "7 10 5 12")
+)
+$ note "{50 53}%2"
+# s "supersaw"
+# gain "0.75"
+# sus "0.22"
+# lobound "63.9"
+# upbound "68"
+# ringmod "0.85"
+# ringfreq "2"
+# ringenv "1000"
+# lopf "800"
+# lopq "1"

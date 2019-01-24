@@ -1,0 +1,36 @@
+import Sound.Tidal.Guiot.Control
+
+setcps 0.22
+
+d1
+$ degradeBy 0.25
+$ fast 12
+$ spaceOut (replicate 3 1)
+$ whenmod 15 2 (#cut "1")
+$ whenmod 14 13 (#ringfreq "8")
+$ slow (12*4*2)
+$ stutWith 19 (1/(4*4*2*4))
+(
+(|+ note (choose [0.02, 7]))
+.
+(|* sustain (choose [0.88,0.94,0.6]))
+.
+(|* ringfreq "1.01")
+.
+(|* gain "1.15")
+)
+$ note "{52*4 62*4 47*6 42*4 52*6}%32"
+# s "supersaw"
+# gain "0.75"
+# sus "0.405"
+# lobound "41.0"
+# upbound "102.00"
+# ringmod "{0.95 0.75}%128"
+# ringfreq "0.25"
+# ringenv "1000.25"
+# lopf (range 01000 08000 $ rand)
+# lopq "0.35"
+# shaped (choose [0.9, 0.7, 0.2, 0, 0.6])
+# cut "{0}%3133"
+# detune (range 0.985 1.015 $ rand)
+# pan (rand)
