@@ -1,0 +1,20 @@
+import Sound.Tidal.Guiot.Control
+
+setcps 0.4
+
+d1
+$ stutWith 4 (slow 16 $ range (1/16) (1/8) $ sine)
+(
+(|+ note "0")
+.
+(|* gain "0.95")
+.
+(|* sus "0.95")
+)
+$ note "{55 60 67 53 62 57 60 67 55}%01"
+# s "supersaw"
+# gain "0.4"
+# sus "0.12"
+# detune (range 0.985 1.015 $ rand)
+# pan (rand)
+

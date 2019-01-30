@@ -1,0 +1,27 @@
+import Sound.Tidal.Guiot.Control
+
+setcps 0.6
+
+d1
+$ stutWith 8 (1/12)
+(
+(|+| note (segment 16 $ range (-0.05) 0.05 $ rand))
+.
+(|* gain "0.95")
+.
+(|* sus "0.95")
+.
+(|+ cut "0")
+)
+$ note "{55 60 67 53 62 57 60 67 55}%06"
+# s "supersaw"
+# gain "0.7"
+# shaped "0.6"
+# sus "1.17"
+# ringmod "0.8"
+# ringfreq "9.1"
+# ringenv "100"
+# detune (range 0.985 1.015 $ rand)
+# pan (rand)
+# cut "0"
+
