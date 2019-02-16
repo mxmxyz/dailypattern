@@ -1,0 +1,30 @@
+d1 $ fast 16 $ cps 0.15
+
+let super = "0.015"
+in
+d2
+$ superimpose (
+(|+ detune super)
+. (
+superimpose
+(|+ detune super)
+))
+$ fast 16
+$ whenmod 5 5 (# cut "1")
+$ degradeBy 0.2
+$ spaceOut (replicate 2 1)
+$ slow (16*2)
+$ fast 1
+$ stutWith 25 (1/(8*3*4*2))
+(|+ note "{0 7 3}%311111")
+.
+(|+ detune (range (-0.10) 0.10 $ rand))
+$ note "{40*4 73*2 97*3 120*2 113*3}%16"
+# s "tunesaw"
+# sus "0.075"
+# tuning "19.00"
+# upbound "160"
+# lobound "060"
+# cut "0"
+# detune "1"
+# gain "0.40"
