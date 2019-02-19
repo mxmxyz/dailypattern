@@ -1,0 +1,36 @@
+import Sound.Tidal.Guiot.Control
+
+d1 $ fast 8 $ cps "0.20 0.30"
+
+let super = "0.004"
+in
+d2
+$ superimpose
+(
+(|+ detune super)
+.
+(superimpose
+(|+ detune (6*super)))
+)
+$ fast 6
+$ whenmod 11 8 (|* detune 1.2)
+$ whenmod 1 0 (|+ note "14")
+$ slow 6
+$ stutWith 13 (1/("{4 3 2 1}%4"*4*2))
+(
+(|+ note "{11 11 0 8 0}%31111")
+.
+(|* sus "0.985")
+.
+(|* gain "0.90")
+.
+(|+ detune (fast 1.131 $ range (-0.005) 0.005 rand))
+)
+$ slowspread slow [4,4]
+$ note "{[69 61]*2 50*3 53*3}%16"
+# s "tunesaw"
+# tuning "19"
+# sus "0.12"
+# pan (rand)
+# gain "0.30"
+# detune (fast 1.12 $ range 0.995 1.005 rand)

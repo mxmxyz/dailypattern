@@ -1,0 +1,21 @@
+import Sound.Tidal.Guiot.Functions
+
+import Sound.Tidal.Guiot.Control
+
+setcps 0.2
+
+d1 
+$ slow 2
+$ stutWith 16 (1/(4*2*"{4 3 3}%4"))
+(
+(|+ note "{11 0 11 8}%3111111")
+.
+(|* sus "0.955")
+.
+(|* gain "0.95")
+)
+$ note "{50*2 55*3 63*2 58*4 66*3}%16"
+# s "tunesaw"
+# tuning ("19")
+# sus "0.06"
+# gain ("0.5")
