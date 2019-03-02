@@ -1,0 +1,33 @@
+d1 $ cps "{1 1 1.5}%1"
+
+setcps 1
+
+d2
+$ degradeBy 0.32
+$ slow (8*4*4)
+$ stutWith 18 (1/(1*8*8*4*8*3)) (
+((|+ note "{00.2 19.1 0.1}%4111")
+.
+(|* shaped "0.99")
+.
+(|* ringfreq "1")
+.
+(|* sus (choose [0.9,0.9,0.8]))
+.
+(|* gain "1.20")
+)
+)
+$ note "{77*4 85*3 69*4 61*7 45*6 93*4 50*3}%064"
+# s "tunesaw"
+# gain "00001.95"
+# sus (fast 1333 $ choose ([0.07,0.35] ++ replicate 3 0.12))
+# shaped "{0.90 1.0}%64"
+# ringfreq (choose [2/1])
+# ringmod "1"
+# ringenv "00030.010"
+# cut "1"
+# tuning "19"
+
+
+
+hush

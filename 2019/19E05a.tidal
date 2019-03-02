@@ -1,0 +1,26 @@
+import Sound.Tidal.Guiot.Control
+
+d1 $ cps "0.95"
+
+d2
+$ whenmod 8 8 (# cut "1")
+$ spaceOut ((replicate 16 0.15))
+$ slow 4
+$ stutWith 10 (1/8) 
+((
+    (|+ note "{31 0}%43111")
+    . 
+    (|*| gain "1.01")
+.
+(|* sustain "1.05")
+))
+$ note "{31 67 300}%16"
+# s "tunesaw" 
+# sustain "{0.058}%16"
+# gain "0.2000"
+# pan (fast 1315 $ rand)
+# detune (fast 1317 $ range 1.5 (slow (1) $ range 2 04 $ sine) $ rand)
+# upbound "500"
+# lobound "070"
+# tuning "53"
+
