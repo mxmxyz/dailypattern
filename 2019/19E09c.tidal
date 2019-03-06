@@ -1,0 +1,33 @@
+import Sound.Tidal.Guiot.Control
+
+import Sound.Tidal.Guiot.Functions
+
+d1 $ cps "0.8"
+
+d2
+$ stutWith "{8 10 12 6 7}%8" (1/("{4 3}%4"*8*4))
+((
+(|+ note "{31 22 0.1}%41111")
+.
+(|* pitchenv "1.00")
+.
+(|* gain "0.99")
+.
+(|* sustain "1.00")
+))
+$ note "{80 102}%8"
+# s "tunesharp"
+# bandpf (choose [1, 2, 1, 4, 0.5])
+# bandpq "0.2"
+# gain "4"
+# pitchenv "00.001"
+# pitchval "0.25"
+# sus "0.2"
+# tuning "53"
+# gain "2.0"
+# upbound "400"
+# lobound "250"
+
+
+
+

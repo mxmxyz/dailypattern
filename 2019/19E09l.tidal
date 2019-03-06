@@ -1,0 +1,48 @@
+import Sound.Tidal.Guiot.Control
+
+import Sound.Tidal.Guiot.Functions
+
+d1 $ fast 16 $ cps (slow 64 $ range 0.125 0.5 $ saw)
+
+d2
+$ superimpose
+(
+(# s "tunesaw")
+.
+(|* sus "0.5")
+.
+(|* gain "0.95")
+)
+$ fast 8
+$ whenmod 2 1 (|-  note "53")
+$ spaceOut [1,1,1]
+$ slow 8
+$ stutWith "{11 09 13}%4" (1/("{4 3}%4"*4*2))
+((
+(|+ note "{0.3 9 35 0 22 0 13 0.4 0}%41111")
+.
+(|* pitchenv "1.00")
+.
+(|* gain "0.849")
+.
+(|* sustain "0.95")
+.
+(|* ringfreq "1.000")
+))
+$ slow 4
+$ note "{237*2 290*3 268*4 237*3 250*2}%16"
+# s "tunesharp"
+# bandpf (choose [1, 2, 1, 4, 0.5])
+# bandpq "004.4"
+# gain "0.01"
+# pitchenv "00.001"
+# pitchval "0.25"
+# sus "0.25"
+# tuning "53"
+# gain "0.8"
+# upbound "500"
+# lobound "050"
+# ringmod "{0.5 1 0}%2111"
+# ringfreq "2.00"
+# ringenv "10000.5"
+# pan (rand)

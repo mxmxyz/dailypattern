@@ -1,0 +1,35 @@
+import Sound.Tidal.Guiot.Control
+
+import Sound.Tidal.Guiot.Functions
+
+d1 $ fast 16 $ cps "0.825"
+
+d2
+$ stutWith "{10 12 9}%2" (1/("{3 2}%2"*2*1))
+((
+(|+ note "{0.3 22 13 0.4}%41111")
+.
+(|* pitchenv "1.00")
+.
+(|* gain "0.999")
+.
+(|* sustain "1.00")
+.
+(|* ringfreq "1.005")
+))
+$ slow 4
+$ note "{237*2 290*3 268*2 237*3 250*2}%8"
+# s "tunesharp"
+# bandpf (choose [1, 2, 1, 4, 0.5])
+# bandpq "0.7"
+# gain "0.125"
+# pitchenv "00.050"
+# pitchval "1.20"
+# sus "0.15"
+# tuning "53"
+# gain "1.5"
+# upbound "500"
+# lobound "050"
+# ringmod "{0.8 0}%2112"
+# ringfreq "2.0"
+# ringenv "10009.0"
