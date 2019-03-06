@@ -1,0 +1,25 @@
+import Sound.Tidal.Guiot.Control
+
+import Sound.Tidal.Guiot.Functions
+
+d1 $ fast 16 $ cps "0.45"
+
+d2
+$ whenmod 8 4 (|> ringfreq (irand 7 + 1))
+$ stutWith "{6 7}%1" (1/16)
+((
+(|+ note "31")
+))
+$ note "130*2"
+# s "tunesharp"
+# tuning "53"
+# gain "0.4"
+# sus "2.0"
+# pitchenv "2.51"
+# pitchval "0.99"
+# bandpf "3"
+# bandpq "7.3"
+# ringmod "0.8"
+# ringfreq "2"
+# ringenv "10000"
+# cut "0"
