@@ -1,0 +1,43 @@
+import Sound.Tidal.Guiot.Control
+
+d1 $ cps (slow 4 $ range 0.2 0.6 $ sine)
+
+
+d2
+$ stutWith 8 (1/16)
+((
+(|+ notea "31")
+.
+(|+ noteb "31")
+.
+(|+ notec "31")
+.
+(|* noted "1.0")
+.
+(|* timescale "0.95")
+))
+$ notea "330*2"
+# noteb "280"
+# notec "310"
+# noted "040"
+# envab "0.08"
+# envbc "0.07"
+# envcd "0.03"
+# s "balloon"
+# tuning "53"
+# sus "0.2"
+# bandpfa "4"
+# bandpqa "2"
+# bandpga "0.5"
+# bandpfb "9"
+# bandpqb "4"
+# bandpgb "0.5"
+# bandpfc "0.5"
+# bandpqc "0.2"
+# bandpgc "16"
+# timescale "1.5"
+# upbound "500"
+# lobound "20"
+# gain "0.10"
+
+hush

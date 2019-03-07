@@ -1,0 +1,23 @@
+d1 $ cps (slow 4 $ range 0.2 0.4 $ sine)
+
+d2
+$ stutWith 19 (msec 60)
+((
+(|+ note "{31 22}%41111")
+))
+$ note "{230(2,5) 252(3,7)}%2"
+# s "tunesharp"
+# tuning "53"
+# sus "0.03"
+# gain "1.0"
+# bandpf "4"
+# bandpq "4.5"
+# ringmod "0.2"
+# ringfreq "2"
+# ringenv "000100"
+# upbound "300"
+# lobound "220"
+# pitchenv "0.010"
+# pitchval "6.0"
+
+import Sound.Tidal.Guiot.Control
