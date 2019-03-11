@@ -1,0 +1,45 @@
+import Sound.Tidal.Guiot.Control
+
+d1 $ fast 16 $ cps 0.8
+
+d2
+$ slow 8
+$ stutWith 8 (1/(4*2*1*"{3 4}%8"))
+((
+(|+ noted "53")
+.
+(|* notea "0.82")
+.
+(|* ringfreq "3")
+))
+$ fast 32
+$ spaceOut [1]
+$ slow 32
+$ noted "{150*3 172*2 150*3 158*2 138*2}%16"
+# noteb "300"
+# notec "350"
+# notea "370"
+# envab "0.10"
+# envbc "0.10"
+# envcd "0.10"
+# tuning "53"
+# s "balloon"
+# sus "0.3"
+# gain "0.85"
+# bandpfa "0.25"
+# bandpqa "0.25"
+# bandpga "16"
+# bandpfb "16"
+# bandpqb "0.1"
+# bandpgb "1"
+# bandpfc "3"
+# bandpqc "0.5"
+# bandpgc "6"
+# ringmod "0.5"
+# ringfreq "0.500"
+# ringenv "10000.00"
+# upbound "300"
+# lobound "260"
+# timescale "0.25"
+
+hush
