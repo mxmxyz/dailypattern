@@ -1,0 +1,34 @@
+import Sound.Tidal.Guiot.Functions
+
+import Sound.Tidal.Guiot.Control
+
+d1
+$ whenmod 1 0 (|- note "{0 22 31 12}%1")
+$ stutWith 12 (1/(3*4*2))
+((
+(|+ note "{31 22 53}%1651")
+.
+(|* gain "0.80")
+.
+(|* pitchenv "0.75")
+.
+(|> pan (shrand 3))
+.
+(|* envcurve "2.0")
+))
+$ inside "{4}%1" (spaceOut [1,1,0.125])
+$ fast 3
+$ stack [
+note "{250 258 303 144 272}%4"
+,
+note "{250 260 264 175 303 144 272}%4"
+]
+# s "plush" 
+# tuning "53"
+# sustain "0.75"
+# envcurve "0.5"
+# gain "0.1250"
+# pitchval "{3.5 2 2 0.5}%4"
+# pitchenv "{0.01 0.01 0.15 0.01 0.01 0.01 0.03}%4"
+# detune (range 0.985 1.015 $ rand)
+# pan (shrand 1)

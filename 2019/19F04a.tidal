@@ -1,0 +1,16 @@
+import Sound.Tidal.Guiot.Functions
+
+import Sound.Tidal.Guiot.Control
+
+d1
+$ fast 4
+$ note "250 260 303 270"
+# s "plush" 
+# tuning "53"
+# sustain "0.18"
+# envcurve "3.0"
+# gain "1.000"
+# pitchval "3.5"
+# pitchenv "0.01"
+# detune (range 0.99 1.01 $ rand)
+# pan (shrand 1)
