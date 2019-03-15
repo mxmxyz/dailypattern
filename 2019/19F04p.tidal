@@ -1,0 +1,28 @@
+import Sound.Tidal.Guiot.Functions
+
+import Sound.Tidal.Guiot.Control
+
+d1
+$ stutWith 16 (1/(3*4*2))
+((
+(|* gain "0.90")
+.
+(|+ note (slow 4 "<84 53 75>"))
+.
+(|* envcurve "1.25")
+.
+(|> pan (shrand 1))
+))
+$ fast 2
+$ every 1 (|+ note (segment 1 $ choose [197,219,228,250]))
+$ note (scale "chromatic53" "0 9 12 8")
+# s "plush"
+# tuning "53"
+# sus "0.1"
+# envcurve "0.5"
+# gain "0.4"
+# pan (rand)
+# pitchenv "0.025"
+# pitchval "1.05"
+# upbound "500"
+# lobound "120"
