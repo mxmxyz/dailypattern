@@ -1,0 +1,43 @@
+setcps 0.3
+
+let shift = 3
+in
+let super = (choose [-0.010, 0.015, 0.005])
+in
+d1
+$ superimpose (
+(|+ detune (super))
+.
+(superimpose 
+(
+(|+ detune (super*4)))
+.
+(|* gain "0.5")
+)
+)
+$ every 1 (|+ note "223 201")
+$ stutWith 8 (1/(3*4*2))
+((
+(|* gain "0.675")
+.
+(|+ note "{29 51 4}%16")
+.
+(|* envcurve "1.25")
+))
+$ slow 3
+$ note (
+(superchromatic53
+(
+(+ shift)
+<$>
+"{[0 4 12] [0 9 14]}%8")
+))
+# s "plush"
+# gain "0.4"
+# pan (rand)
+# sustain "0.8"
+# envcurve "4"
+# pitchval "1.00"
+# pitchenv "0.015"
+# tuning "53"
+# detune "1"
