@@ -1,0 +1,21 @@
+setcps 0.3
+
+d1
+$ stutWith 4 (1/2)
+((
+(|+ note "31 53")
+.
+(|* gain "0.8")
+))
+$ every 1 (|+ note "230")
+$ note (
+shiftscale superchromatic53 0
+"{[5 12 0] 0*2 [0 9 15] 12*2 [5 12 0] }%8"
+)
+# s "plush"
+# tuning "53"
+# sus "<0.2 0.12>"
+# envcurve "4"
+# gain "0.5"
+
+hush

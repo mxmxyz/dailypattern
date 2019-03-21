@@ -1,0 +1,26 @@
+setcps 0.3
+
+d1
+$ stutWith 6 (1/(2*4))
+((
+(|+ note "{31 53}%16")
+.
+(|* gain "0.8")
+.
+(|* envcurve "1.50")
+))
+$ inside 7 (every 4 (|* detune "0.5"))
+$ every 1 (|+ note "230")
+$ note (
+shiftscale superchromatic53 0
+"{[5 12 0] 0*2 [0 9 15] 12*2 [5 12 0] }%8"
+)
+# s "plush"
+# tuning "53"
+# sus "<0.4 0.65>"
+# envcurve "4"
+# gain "0.4"
+# pitchenv "0.005"
+# pitchval "1.02"
+
+hush

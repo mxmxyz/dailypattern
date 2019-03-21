@@ -1,0 +1,26 @@
+setcps 0.4
+
+d1
+$ fast 1
+$ stutWith 6 (1/3*2*2)
+((
+(|+ note "31 53")
+.
+(|* gain "0.75")
+.
+(|* envcurve "1.5")
+))
+$ every 1 (|+ note 220)
+$ slowspread slow [2,3]
+$ note
+(
+superchromatic53
+"{[0 12 4] 0*2 [0 15 10] [0 16 12] [0 13 9]}%8"
+)
+# s "plush"
+# tuning "53"
+# gain "0.5"
+# pitchval "1.05"
+# pitchenv "1.05"
+# sustain "0.3"
+# envcurve "4"
