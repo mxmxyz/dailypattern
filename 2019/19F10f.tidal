@@ -1,0 +1,33 @@
+d1
+$ slow (7/5)
+$ stutWith 12 (1/(2*3))
+((
+(|+ note "{0.1 0.4 1}%16")
+.
+(|* gain "0.985")
+.
+(|* envcurve "1.80")
+.
+(|> pan (shrand 1))
+.
+(|* pitchenv "{3 2 8 4 16}%2")
+.
+(|* pitchval "{3 10 0.5 0.25 1 20 2 500}%2")
+))
+$ every 1 (|* detune (range 0.975 1.025 $ rand))
+$ every 1 (|+ note "{180 282 231}%8")
+$ iter (slow 4 "<3 4>")
+$ note
+(shiftscale superchromatic53 0
+"{0 5 ~ 9 12}%8")
+# s "plush"
+# gain "0.35"
+# sus "0.85"
+# envcurve "{2}%2"
+# tuning "53"
+# pitchval "32"
+# pitchenv "00.0015"
+# detune "{1 1 0.5}%8"
+# pan (rand)
+# upbound "252"
+# lobound "250.5"
