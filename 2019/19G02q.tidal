@@ -1,0 +1,49 @@
+d1 $ fast 16 $ cps "0.08 0.12"
+
+d2
+$ stutWith 10 (1/(1*1*3*2))
+(
+(|* timescale (choose [2.0,1.5]))
+.
+(|+ noted "03")
+.
+(|+ notea "34")
+.
+(|+ noteb "01")
+.
+(|+ notec "02")
+.
+(|* envbc "0.75")
+.
+(|* envcd "0.85")
+.
+(|* envab "1.60")
+.
+(|* gain "0.99")
+)
+$ noted "{250*2 303*3 281*2}%8"
+# notea "130"
+# noteb "{260 265}%16"
+# notec "250"
+# sus "16.0"
+# envab "4.15"
+# envbc "4.25"
+# envcd "4.15"
+# timescale "2.0"
+# s "balloon"
+# tuning "53"
+# gain "0.15"
+# ringmod "0.60"
+# ringenv "2.201"
+# ringfreq "0.125"
+# bandpfa "16"
+# bandpqa "0.5"
+# bandpga "18.0"
+# bandpfb "2.0"
+# bandpqb "2.00"
+# bandpgb "0"
+# bandpfc "0.125"
+# bandpqc "0.05"
+# bandpgc "0600"
+# upbound "770"
+# lobound "102"

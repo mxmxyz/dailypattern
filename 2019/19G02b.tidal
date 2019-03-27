@@ -1,0 +1,42 @@
+d1 $ fast 16 $ cps "0.4 0.5"
+
+d2
+$ fast 8
+$ whenmod 5 3 (|*| decay "4.0")
+$ whenmod 7 6 (#cut "{1}%131")
+$ slow (8*8*4)
+$ stutWith 16 (1/(8*("{48 32 48}%32")))
+(
+(|*| gain "0.90")
+.
+(|* sustain (choose [0.8,0.9,0.9]))
+.
+(|+ note "{31 53 0 22}%13333")
+.
+(|* decay "{0.9 0.9 0.8}%128")
+.
+(|> pan (shrand 1))
+.
+(|* ringenv (range 1 1.5 $ shrand 5))
+.
+(|* bandpf "1.0 1.0")
+.
+(|* ringfreq "2.00")
+)
+$ note "{60*4 91*6 100*4}%64"
+# s "{tunesharp}%128"
+# bandpf "4"
+# bandpq "0.401"
+# sustain "{0.15 0.05 0.15 0.15 0.15 0.15 0.15}%256"
+# decay "{0.15 0.55 0.15 1.15 0.15 2.15 0.15}%256"
+# gain "02.00"
+# pan (range 0 1 $ shrand 3)
+# detune (range 1.0 1.0 $ shrand 4)
+# ringmod "1.0"
+# ringenv "0000.001"
+# ringfreq "2.0"
+# tuning "53"
+# upbound "800"
+# lobound "10"
+
+hush
