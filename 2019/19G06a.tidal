@@ -1,0 +1,30 @@
+d1 $ fast 16 $ cps "0.2 0.3"
+
+d2
+$ fast 8
+$ whenmod 5 5 (|*| decay "0.2")
+$ whenmod 7 6 (#cut "{1}%131")
+$ slow (8*8*4)
+$ stutWith 12 (1/(8*("{32 48}%64")))
+(
+        (|* gain "0.99")
+        .
+	(|* sustain (choose [0.9,0.8,0.9]))
+	.
+	(|+ note (fast 131111 $ range (7) 7.06 $ rand))
+	.
+	(|* decay "0.8")
+.
+(|> pan (shrand 4))
+)
+$ note "{[36 29]*4 60*3}%64"
+# s "{tunesharp}%128"
+# bandpf (choose [4, 8, 2])
+# bandpq "0.88"
+# sustain "{0.15 0.05 0.15 0.15 0.15 0.25 0.15}%256"
+# decay "{0.05 0.05 0.15 0.05 0.05 0.15 0.15}%128"
+# gain "1.0"
+# upbound "102"
+# lobound "27"
+# pan (fast 131 $ range 0 1 $ rand)
+# detune (fast 13111 $ range 1 1 $ rand)
