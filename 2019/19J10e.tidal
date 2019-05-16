@@ -1,0 +1,39 @@
+setcps 0.7
+
+d1 
+$ slow 2
+$ degradeBy 0.2
+$ superimpose ((slow 3) . (|* sus 8.5) . (|* gain 0.75))
+$ inside 1 (stutWith 4 (1/(10))
+(
+(|* fmfreq "{1 1}%3111")
+.
+(|* fmamt "1.50")
+.
+(|* sus "0.95")
+.
+(|+ note "{31 53 14 9 0}%4111")
+.
+(|* pitchenv "1.10")
+.
+(|> pan (shrand 3))
+))
+$ fast (1/1) 
+$ note "144(7,30)"
+# fmamt "{4 16 1 2 4}%7111"
+# fmfreq "{4.0 3 1}%2"
+# sus "0.4"
+# gain "0.5"
+# pan (shrand 2)
+# s "stringtest"
+# tuning "53"
+# combdel (slow 4 $ range 0.00 0.00 $ square)
+# combtime "0.000"
+# detune (range 0.995 1.005 $ shrand 6)
+# envcurve "3"
+# upbound "250"
+# lobound "100"
+# pitchval "32.0"
+# pitchenv "0.01"
+
+hush
