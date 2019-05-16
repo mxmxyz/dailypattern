@@ -1,0 +1,32 @@
+d1
+$ slow 4
+$ stutWith "{10 12 18}%1" (1/(2))
+(
+(|+ note "{31 0 53 9 31}%3111")
+.
+(|* sus "0.60")
+.
+(|> pan (shrand 2))
+.
+(|* pitchenv "1.25")
+)
+$ stack
+[
+fast 2 
+$ note "234(11,32)"
+,
+fast 4 
+$ note "203(5,8) 150(3,8)"
+]
+# gain "0.2"
+# s "tunesharp"
+# sus "1.25"
+# tuning "53"
+# upbound "600"
+# lobound "80"
+# pan (shrand 1)
+# detune (range 0.995 1.005 $ shrand 5)
+# pitchval "1.05"
+# pitchenv "0.02"
+
+hush

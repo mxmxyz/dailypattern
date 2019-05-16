@@ -1,0 +1,30 @@
+setcps 0.8
+
+d1 
+$ slow 3
+$ degradeBy 0.0
+$ stutWith 14 (1/(16))
+(
+(|* fmfreq "{0.5 1}%3111")
+.
+(|* fmamt "1.80")
+.
+(|* sus "0.8")
+.
+(|+ note "{31 53 14 9 0}%4111")
+)
+$ fast 1 
+$ note "144(19,32)"
+# fmamt "{4 16 64 128 1 2 4}%7111"
+# fmfreq "{4.0 3}%1"
+# sus "0.8"
+# gain "1.0"
+# pan (shrand 2)
+# s "stringtest"
+# tuning "53"
+# combdel (range 0.5 0.20 $ square)
+# combtime "0.545"
+# detune (range 0.995 1.005 $ shrand 6)
+# envcurve "16"
+
+hush
