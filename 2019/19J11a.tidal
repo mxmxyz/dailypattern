@@ -1,0 +1,13 @@
+d1 $ fast 2 $ sound "bd(7,30)"
+# shape 0.8
+# gain 2
+# rel 0.2
+
+d2 $ sound "cp:0"
+# gain 4
+# rel 0.1
+
+d3 $ sound "hh*30"
+# gain 1.5
+
+setcps 0.125

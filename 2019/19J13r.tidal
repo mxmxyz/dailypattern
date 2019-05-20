@@ -1,0 +1,16 @@
+d1
+$ stutWith 6 (100/1)
+(
+(|+ note "0")
+.
+(|* fmamt "1.2")
+)
+$ note (fast 20 $ fromList (take 10000 [1..]))
+# s "stringtest"
+# gain "0.5"
+# sus "0.25"
+# tuning "1000"
+# fmamt "4"
+# fmfreq "0.5"
+# pan (shrand 3)
+# envcurve "8"
