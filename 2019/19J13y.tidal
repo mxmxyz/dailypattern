@@ -1,0 +1,24 @@
+d1
+$ stutWith 22 (21/20)
+(
+(|+ note "{2400 28 24 1400 1200}%05")
+.
+(|* fmamt "1.05")
+.
+(|* fmfreq "1.001")
+.
+(|> pan (shrand 4))
+)
+$ note (fast 20 $ fromList (take (2400*8) [1..]))
+# s "stringtest"
+# gain "0.125"
+# sus "0.25"
+# tuning "2400"
+# fmamt "8"
+# fmfreq "4"
+# pan (shrand 3)
+# envcurve "6"
+# upbound (2400*8)
+# lobound "1"
+
+setcps 0.475
