@@ -1,0 +1,29 @@
+setcps 0.25
+
+d1
+$ degradeBy 0.1
+$ slow 1
+$ every 1 (|- note 53)
+$ superimpose ((slow 3) . (|* sus 8) . (|+ note 53) . (|* gain 0.7))
+$ inside (2/1) (stutWith 8 (1/(4*2*1*1.00))
+(|+ note "{53 0 9}%1333")
+.
+(|* fmamt "{1.5 1.1 1.7}%4")
+.
+(|* sus (choose [0.4, 0.65, 0.8, 0.9]))
+.
+(|> pan (shrand 5))
+)
+$ inside (2*4) (spaceOut (replicate 2 1 ++ replicate 1 0.5))
+$ note "{250*4 228*3 199*4}%4"
+# s "stringtest"
+# fmfreq "0.5"
+# fmamt "2.5"
+# tuning "53"
+# sus "0.25"
+# envcurve (range 2 8 $ fmap (* 1) (shrand 3))
+# gain "0.5"
+# pan (rand)
+# detune (range 0.985 1.015 $ shrand 4)
+# upbound "430"
+# lobound "150"

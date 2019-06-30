@@ -1,0 +1,27 @@
+setcps 0.25
+
+d1
+$ slow 1
+$ every 1 (|- note 53)
+$ inside (1/8) (stutWith 10 (1/(2*2*1*0.98))
+(|+ note "{53 9 13}%1333")
+.
+(|* fmamt "{1.5 1.1 1}%4")
+.
+(|* sus (choose [0.65, 0.8, 0.9 , 0.3]))
+.
+(|> pan (shrand 5))
+)
+$ inside (1*4) (spaceOut (replicate 2 1 ++ replicate 0 0.5))
+$ note "{250*4 228*3 199*4}%4"
+# s "stringtest"
+# fmfreq "1.5"
+# fmamt "832"
+# tuning "53"
+# sus "0.25"
+# envcurve "3"
+# gain "0.5"
+# pan (rand)
+# detune (range 0.985 1.015 $ shrand 4)
+# upbound "400"
+# lobound "150"
