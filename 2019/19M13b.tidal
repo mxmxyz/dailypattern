@@ -1,0 +1,54 @@
+d1 $ fast 16 $ cps "0.100"
+
+let super = (rangex 0.001 0.002 $ shrand 1)
+in
+d2
+$ superimpose (
+(|+ detune super)
+.
+(|* cut 2)
+.
+(superimpose (
+(|+ detune (2*super))
+.
+(|* cut 2)
+)))
+$ slowspread fast [16]
+$ whenmod 5 5 (# cut "1")
+$ whenmod 11 5 (|- note "19")
+$ degradeBy 0.70
+$ stutWith 20 (1/(4*4*4*1/2))
+(
+(
+(|+ note "{0 0.05 0.1 00 19}%31111")
+.
+(|* gain "1.10")
+.
+(|* sus "1.125")
+.
+(|+ cut "0")
+.
+(|* ringfreq "1.2")
+.
+(|> pan (shrand 4))
+)
+)
+$ slow 16
+$ inside (8*2) ( spaceOut (replicate 0 1 ++ replicate 4 0.5))
+$ slow (2)
+$ note "{73*6 81*4 68*2 84*4 81*4 92*3}%16"
+# s "tunesaw"
+# gain "0.20"
+# sus "{0.35 0.015 0.78}%64"
+# ringmod "0.0"
+# ringfreq "0.50"
+# ringenv "10100.04"
+# detune (range 0.995 1.005 $ shrand 0)
+# pan (shrand 3)
+# cut "0"
+# upbound "137"
+# lobound "030"
+# tuning "19"
+
+
+hush
