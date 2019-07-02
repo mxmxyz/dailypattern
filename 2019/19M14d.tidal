@@ -1,0 +1,58 @@
+d1 $ fast 16 $ cps "0.08 0.10"
+
+d2
+$ inside (30) (every 23 (+ gain "0"))
+$ fast 4
+$ slow (5/4)
+$ degradeBy 0.60
+$ inside (16*3) (spaceOut (replicate 32 1))
+$ stutWith 15 (1/(16*4*4*3*2))
+(
+(|* timescale (choose [1.0,1.0,1.0]))
+.
+(|+ noted "34")
+.
+(|+ notea (range 30.8 31.20 $ shrand 7))
+.
+(|+ noteb "31")
+.
+(|+ notec "22")
+.
+(|* envbc "0.95")
+.
+(|* envcd "0.85")
+.
+(|* envab "1.10")
+.
+(|* gain "0.99")
+.
+(|* sus "0.990")
+.
+(|> pan (shrand 4))
+)
+$ noted "{250*2 303*2 500*2 281*2}%32"
+# notea "900"
+# noteb "{260 265}%16"
+# notec "{800 600 300 1100 900}%33"
+# sus "0.1"
+# envab "0.55"
+# envbc "2.25"
+# envcd "0.85"
+# timescale "1.0 0.4 0.2"
+# s "balloon"
+# tuning "53"
+# gain "0022.65"
+# ringmod (slow 1 $ "{0.90 0.90}%2")
+# ringenv "10042.201"
+# ringfreq "{9.0125 0.0125}%4"
+# bandpfa "7"
+# bandpqa "0.015"
+# bandpga "006.2"
+# bandpfb "000.66"
+# bandpqb "0.10"
+# bandpgb "1.10"
+# bandpfc "0.125"
+# bandpqc "0.02"
+# bandpgc "0012.2"
+# upbound "700 720"
+# lobound "150"
