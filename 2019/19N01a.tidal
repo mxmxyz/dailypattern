@@ -1,0 +1,48 @@
+setcps 0.5
+
+d1
+$ slow "{8 6 4 8}%2"
+$ inside (4*4) (spaceOut (replicate 4 1))
+$ stack
+[
+fast 2 
+$ stutWith 4 (1/((1*1)))
+(
+(|+ note "{22 31 9 0 53}%2")
+)
+$ note "059(11,32,1)"
+# gain "04.5"
+# sus "0.05"
+# pitchenv "0.02"
+# pitchval "8"
+# upbound "200"
+# lobound "50"
+,
+fast 2
+$ stutWith 8 (1/((1*1)))
+(
+(|+ note "{22 31 9 0 53}%2")
+.
+(|* ringfreq "1.0")
+.
+(|* sus "1.1")
+)
+$ note "303(23,32,4)"
+# gain "3.0"
+# sus "0.06"
+# pitchval "1.00"
+# pitchenv "0.005"
+# ringenv "1000.15"
+# ringmod "0.8"
+# ringfreq "2.00"
+# bandpf "2"
+# bandpq "0.95"
+# upbound "350"
+# lobound "120"
+]
+# s "tunesharp"
+# tuning "53"
+# pan (shrand 1)
+# detune (range 0.995 1.005 $ shrand 5)
+
+hush

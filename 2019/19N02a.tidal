@@ -1,0 +1,38 @@
+wordmap :: (Num a, Eq a) => a -> a
+wordmap 0 = 0
+wordmap 1 = 31
+wordmap 2 = 14
+ 
+
+let pat = "[0(7,30), 1(9,30,5), 0(11,30,3), 1(5,30,1)]"
+in
+d2 
+$ slow 2
+$ inside (1/1) (every 1 (|+ note "{128 128 160 150}%1"))
+$ inside 1 (stutWith 10 (1/6)
+(
+(|+ note "{22 0.2}%3111")
+.
+(|* envcurve "1.2")
+.
+(|* fmamt "1.35")
+)
+)
+$ note (
+(id
+(fmap wordmap
+pat
+)))
+# s "stringtest"
+# tuning "53"
+# gain "0.3"
+# sus "0.3"
+# envcurve "4"
+# pan pat
+# fmamt "{4 2 8}%3111"
+# fmfreq "{1 4 2 0.5}%8"
+# upbound "400"
+# lobound "100"
+ 
+
+hush

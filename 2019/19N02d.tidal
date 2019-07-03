@@ -1,0 +1,46 @@
+setcps 0.4
+
+let pat = "1(<13 19>,30,<0 2 5>)"
+in
+d1
+$ fast (1/1)
+$ inside (1/5) (stutWith 10 (1/6)
+(
+(|+ note "{22 31}%1")
+.
+(|* sus "0.95")
+.
+(|* gain "0.95")
+.
+(|* fmamt "1.0")
+))
+$ degradeBy 0.7
+$ superimpose ((shiftl (5/1)) . (transdown 31) . (|* fmamt "8"))
+$ transup 250
+$ stack
+[
+note (struct pat $ "{31}%6")
+,
+note (struct (inv pat) $ 0)
+]
+# s "stringtest"
+# fmamt "4"
+# fmfreq "1.5"
+# gain "0.6"
+# stack
+[
+sus (struct pat $ "<0.3 0.1>")
+,
+sus (struct (inv pat) $ "<0.1 0.3>")
+]
+# envcurve "6"
+# tuning 53
+# stack
+[
+pan (struct pat $ 1)
+,
+pan (struct (inv pat) $ 0)
+]
+# upbound "280"
+# lobound "120"
+
