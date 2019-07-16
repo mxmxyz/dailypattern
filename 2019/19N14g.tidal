@@ -1,0 +1,18 @@
+d1
+$ superimpose ((slow 1.2) . (|* note 1.5) . (|* sus 0.75) . (|* gain 0.8))
+$ superimpose ((slow 1.2) . (|* note 2) . (|* sus 0.75) . (|* gain 0.8))
+$ superimpose ((slow 1.2) . (|* note 1.5) . (|* sus 0.75) . (|* gain 0.8))
+$ transdown 12
+$ note "{400 700 900}%2"
+# s "stringtest"
+# detune ((range 0.990 1.010 $ rand) * 0.25)
+# sus "30"
+# tuning "0"
+# gain "0.20"
+# envcurve "1.5"
+# fmamt "2"
+# fmfreq "0.25"
+# pitchval "1.0"
+# pitchenv "0.05"
+
+setcps 0.25

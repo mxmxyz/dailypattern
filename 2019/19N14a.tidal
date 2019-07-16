@@ -1,0 +1,29 @@
+d1 $ fast 1 
+$ stutWith 3 (1/4)
+(
+(|* sus "0.6")
+.
+(|+ note 12)
+)
+$ stack
+[
+transdown 12 $ stack
+[
+up "36(<5 13 11 9>,16,3)"
+,
+up "48(<6 13 8>,16,1)"
+,
+up "43(<11 9 8 13 7>,16,0)"
+,
+up "41(<5 7>,16)" # gain 1.3
+]
+# s "bass3"
+]
+# pan ((shrand 3 + shrand 4) / 2)
+# sus 0.3
+# lpf (range 2000 16000 $ shrand 8)
+# lpq 0.2
+
+
+setcps 0.7
+
