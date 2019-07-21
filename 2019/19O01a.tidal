@@ -1,0 +1,23 @@
+d1
+$ degBy 0.6
+$ superimpose ((degBy 0.1) . (slow 1.2) . (|* note (3/2)) . (|* sus 0.85) . (|* gain 0.9))
+$ superimpose ((degBy 0.1) . (slow 1.2) . (|* note (2/1)) . (|* sus 0.85) . (|* gain 0.9))
+$ superimpose ((degBy 0.7) . (slow 1.2) . (|* note (2/1)) . (|* sus 0.85) . (|* gain 0.9))
+$ superimpose ((degBy 0.5) . (slow 1.2) . (|* note (9/8)) . (|* sus 0.85) . (|* gain 0.9))
+$ transdown 0
+$ note "{440 440 }%2"
+# s "stringtest"
+# detune ((range 0.995 1.005 $ rand) * 0.25)
+# sus "30"
+# tuning "0"
+# gain "0.05"
+# envcurve "1.5"
+# fmamt "2"
+# fmfreq (fast 64 $ choose [0.5, 1, (9/8)])
+# pitchval (range 0.99 1.01 $ shrand 3)
+# pitchenv "1.45"
+# pan (shrand 5)
+
+setcps 1.0
+
+hush
