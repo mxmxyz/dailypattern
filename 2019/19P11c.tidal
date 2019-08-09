@@ -1,0 +1,30 @@
+let matrix = jmat2 (7, 2, 1) (11, 1, 1)
+in
+d1
+$ (|* note 80)
+$ note (jtoScale' (2) matrix (segment 1 (irand ((length matrix) * 4))))
+# s "plush"
+# sus 10.7
+# envcurve 0.5
+# gain 0.5
+# pan (shrand 2)
+# tuning 0
+# attpercent 0.4
+
+setcps 0.35
+
+(jmat2 ((7), 2, 1) ((11), 1, 1)) :: [Rational]
+
+d2
+$ fast 8
+$ note 160
+# s "plush"
+# sus 00.5
+# envcurve 2.5
+# gain 0.50
+# tuning 0
+# attpercent 0.01
+
+let tempo = ((replicate 38 0.35) ++ [0.3] ++ [0.25])
+in
+d3 $ slow 20 $ cps (listToPat (tempo))

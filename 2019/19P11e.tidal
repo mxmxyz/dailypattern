@@ -1,0 +1,23 @@
+--x/y
+
+setcps 0.35
+
+d1 
+$ note 800
+# s "plush"
+# sus 10.7
+# envcurve 0.5
+# gain 0.4
+# pan 0
+# tuning 0
+# attpercent 0.4
+
+d2 
+$ note 500
+# s "plush"
+# sus 10.7
+# envcurve 0.5
+# gain 0.4
+# pan 1
+# tuning 0
+# attpercent 0.4

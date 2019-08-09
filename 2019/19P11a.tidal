@@ -1,0 +1,26 @@
+let matrix = (jmat2 ((3/2), 2, 2) ((11/8), 1, 0))
+in
+d1
+$ (|* note 80)
+$ note (jtoScale' (2) matrix (segment 1 (irand ((length matrix) * 4))))
+# s "plush"
+# sus 10.7
+# envcurve 0.5
+# gain 0.5
+# pan (shrand 2)
+# tuning 0
+# attpercent 0.4
+
+setcps 0.35
+
+(jmat2 ((3/2), 2, 2) ((11/8), 1, 0))
+
+d2
+$ fast 8
+$ note 160
+# s "plush"
+# sus 00.5
+# envcurve 2.5
+# gain 0.50
+# tuning 0
+# attpercent 0.01

@@ -1,0 +1,17 @@
+d2 
+$ stutWith 4 0
+(
+(|* speed 2)
+.
+(|+ cut 1)
+)
+$ sound "cp*32" 
+# cut (irand 3 + 1)
+# speed (1/2)
+# shape 0.4
+
+let revpat = (segment 32 $ range 0.1 80 $ shrand 3)
+in
+d1
+$ room (revpat)
+# size (revpat / 100)
