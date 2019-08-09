@@ -1,0 +1,52 @@
+d2
+$ slow 1
+$ degradeBy 0.0
+$ (|* note (1/2))
+$ (|+ note 00)
+$ (|* gain 0.4)
+$ superimpose (|+ note (range 0.01 0.02 $ rand))
+$ stack
+[
+inside (1/7) (stutWith 11 (1/(1*1*1*1))
+(|* note ("{1 1 2 1.75}%133"))
+.
+(|* gain 0.95)
+.
+(|* sus 0.95)
+)
+$ (|* note (1/4))
+$ note "[{800*4 1100*4 1600*3 400*4 200*4 1200*3 1650*4}%4]*4"
+# gain "0.20"
+# sus "0.10"
+,
+slow 1.0035 $
+note "{600}%2"
+# gain 0.00
+# sus "31.9"
+,
+slow 1.003 $ 
+note "100"
+# gain 0.00
+# sus 8
+,
+slow 1.002 $
+note "550"
+# gain 0.00
+# sus "31.9"
+,
+note "1100"
+# gain 0.00
+# sus "31.9"
+,
+note "0825"
+# gain 0.00
+# sus "31.9"
+]
+# s (choose ["stringtest", "plush"])
+# tuning 0
+# fmfreq (1/2)
+# fmamt 3
+# envcurve 0.125
+# pan (shrand 2)
+
+setcps 0.125

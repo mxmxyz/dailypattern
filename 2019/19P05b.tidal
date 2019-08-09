@@ -1,0 +1,45 @@
+setcps 0.3
+
+d1
+$ degBy 0.0
+$ stutWith 6 (1/8)
+(
+(transup (choose [0, 0, 0, 0, 0, 0, 0, 12, 0]))
+.
+(|* gain 0.95)
+)
+$ (transdown (choose [12,24,12,24,12]))
+$ slow 6
+$ slowcat
+[
+fast 8 $ note "{51 48 55 60 48}%4"  
+,
+fast 8 $ note "{51 48 55 60 48}%4"  
+,
+fast 8 $ note "53 60 53 56"
+,
+fast 8 $ note "55 62 55 58"
+]
+# tuning 12
+# s "stringtest"
+# fmfreq 0.5
+# fmamt 1.5
+# sus 8.3
+# envcurve 1
+# gain 0.08
+# pan (shrand 2)
+# detune (range 0.99 1.01 $ shrand 4)
+
+d2
+$ slow 18
+$ transup (choose [0,0,0,0,12,0,0])
+$ transup "48 48 53 55"
+$ (|* gain (fast 100 "{2.0 1 1.5 1}%5"))
+$ (|* gain (fast 100 "{2.0 1 1.5}%5"))
+$ note "[0 12 7 0 3]*100"
+# s "plush"
+# sus "0.3"
+# gain 0.2
+# envcurve 2.3
+# detune (range 0.995 1.005 $ shrand 5)
+

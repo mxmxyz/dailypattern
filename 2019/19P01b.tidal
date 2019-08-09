@@ -1,0 +1,17 @@
+d2
+$ fast 16
+$ degradeBy 0.0
+$ superimpose ((degradeBy 0.1) . (slow 0.500) . (|* note (1/2)) . (|* gain (4/5)))
+$ superimpose ((degradeBy 0.1) . (slow 1.000) . (|* note (3/2)) . (|* gain (4/5)))
+$ superimpose ((degradeBy 0.1) . (slow 1.002) . (|* note (7/4)) . (|* gain (4/5)))
+$ superimpose ((degradeBy 0.1) . (slow 1.000) . (|* note (7/4)) . (|* gain (4/5)))
+$ superimpose ((degradeBy 0.15) . (slow "1.00 1.05") . (|* note (3/2)) . (|* gain (4/5)))
+$ note "{100 50 200}%2"
+# s "stringtest"
+# tuning 0
+# gain 0.20
+# fmfreq 3.5
+# fmamt 8
+# sus "0.4"
+# envcurve 8.125
+# pan (shrand 2)

@@ -1,0 +1,29 @@
+setcps 0.3
+
+d1
+$ degBy 0.0
+$ stutWith 7 (1/8)
+(
+(transup (choose [0, 0, 0, 0, 0, 0, 0, 12, 12]))
+.
+(|* gain 0.95)
+)
+$ (transdown (choose [12,24,12,24,12]))
+$ slow 6
+$ slowcat
+[
+fast 8 $ note "{51 48 55 60 48}%4"  
+,
+fast 8 $ note "53 60 53 56"
+,
+fast 8 $ note "55 62 55 58"
+]
+# tuning 12
+# s "stringtest"
+# fmfreq 0.5
+# fmamt 1.5
+# sus 8.3
+# envcurve 1
+# gain 0.08
+# pan (shrand 2)
+# detune (range 0.99 1.01 $ shrand 4)

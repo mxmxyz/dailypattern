@@ -1,0 +1,37 @@
+--x/y
+
+setcps 0.5
+
+d1
+$ note 80
+# s "plush"
+# tuning 0
+# pan 1
+# sus 2.5
+# gain 0.5
+# attperc 0.3
+
+
+d2
+$ note 80.1
+# s "plush"
+# tuning 0
+# pan 0
+# sus 2.5
+# gain 0.5
+# attperc 0.3
+
+d3
+$ stutWith 6 (0)
+(
+(|* note (3/2))
+.
+(fast 2)
+)
+$ note 160.1
+# s "plush"
+# tuning 0
+# sus 1.5
+# gain 0.2
+# attperc 0.0
+# pan 0.5

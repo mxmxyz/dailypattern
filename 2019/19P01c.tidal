@@ -1,0 +1,33 @@
+d2
+$ slow 1
+$ degradeBy 0.0
+$ (|* gain 0.5)
+$ superimpose (|+ note (range 0.01 0.05 $ rand))
+$ stack
+[
+note "{400}%2"
+# gain 0.10
+# sus "31.9"
+,
+note "008"
+# gain 1.70
+# sus 10
+,
+note "550"
+# gain 0.15
+# sus "31.9"
+,
+note "1100"
+# gain 0.10
+# sus "31.9"
+,
+note "1650"
+# gain 0.30
+# sus "31.9"
+]
+# s "plush"
+# tuning 0
+# envcurve 0.125
+# pan (shrand 2)
+
+setcps 0.125

@@ -1,0 +1,15 @@
+d1
+$ superimpose ((slow 1.031) . (|* note (7/4)) . (|* gain (4/5)))
+$ superimpose ((slow 1.031) . (|* note (7/4)) . (|* gain (4/5)))
+$ superimpose ((slow 1.031) . (|* note (3/2)) . (|* gain (4/5)))
+$ superimpose
+(|+ note "0.25 0.5")
+$ note "{100 200}%2"
+# s "plush"
+# tuning 0
+# gain 0.06
+# sus "25"
+# envcurve 0.125
+# pan (shrand 2)
+
+setcps (1/5)

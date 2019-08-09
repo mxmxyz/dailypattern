@@ -1,0 +1,44 @@
+--x/y
+
+setcps 0.5
+
+d1
+$ note 80
+# s "plush"
+# tuning 0
+# pan 1
+# sus 3.0
+# gain 0.5
+# attperc 0.1
+# envcurve 1.0
+
+
+d2
+$ note 80.0
+# s "plush"
+# tuning 0
+# pan 0
+# sus 2.5
+# gain 0.5
+# attperc 0.3
+
+d3
+$ stutWith 4 (0/4)
+(
+(|* note (7/4))
+.
+(fast 2)
+.
+(degBy 0.1)
+)
+$ note 160.1
+# s "plush"
+# tuning 0
+# sus 1.5
+# envcurve 3
+# gain 0.2
+# attperc 0.501
+# pan (slow (range 0.1 8 $ slow 4 $ sine) $ range 0 1 $ sine)
+
+
+d2 silence

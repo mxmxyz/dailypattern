@@ -1,0 +1,13 @@
+let jscale = (jmat2 ((3/2), 2, 1) ((7/4), 2, 1))
+in
+d1
+$ (|* note 090)
+$ note (jtoScale jscale (segment 4 (irand ((length jscale) * 3))))
+# s "plush"
+# sus 2.7
+# envcurve 2
+# gain 0.3
+# pan (shrand 2)
+# tuning 0
+# attpercent 0.2
+# detune (range 0.998 1.002 $ shrand 3)
