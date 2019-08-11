@@ -1,0 +1,51 @@
+d1 $ fast 16 $ cps 0.4
+
+let pat = "1(<13 19>,30,<0 2 5>)"
+    fmpat = (choose [0.5, 0.25, 1, 0.125, 2])
+in
+d2
+$ fast 1
+$ inside (1/5) (stutWith 14 (1/6)
+((|+ note "{22 31}%6")
+.
+(|* gain 0.98)
+.
+(|* fmamt 1.15)
+.
+(|* sus 0.8)
+))
+$ superimpose ((shiftr (6/1)) . (transdown 53) . (|* fmamt "2.00"))
+$ transup 250
+$ stack
+[
+note (struct pat $ "{31 29}%6")
+,
+note (struct (inv pat) $ 0)
+]
+# s "stringtest"
+# fmamt (fmpat * 2)
+# fmfreq fmpat
+# gain "1.1"
+# stack
+[
+sus (struct pat $ "<0.15 0.05>")
+,
+sus (struct (inv pat) $ "<0.05 0.15>")
+]
+# attpercent 0.01
+# envcurve "01"
+# tuning 53
+# stack
+[
+pan (struct pat $ 1)
+,
+pan (struct (inv pat) $ 0)
+]
+# upbound "471"
+# lobound "053"
+
+let revpat = (segment 8 $ range 000.1 001.2 $ shrand 8)
+in
+d3
+$ room revpat
+# size 0.80
