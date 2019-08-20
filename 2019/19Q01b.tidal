@@ -1,0 +1,19 @@
+--x/y
+
+setcps 0.07
+
+let speed = 16
+in
+d1
+$ fast speed
+$ cat [
+stack [ 
+note 110 # pan 0
+, 
+note (110*3) # pan 1 # detune (range 0.995 1.005 $ shrand 2)] # tuning 0
+]
+# s "tunesaw"
+# sus (32.0 / speed)
+# gain 1.5
+# lopf (880*4)
+# lopq 0.85

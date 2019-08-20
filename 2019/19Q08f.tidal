@@ -1,0 +1,36 @@
+(jmat2 (3, 2, 2) (7, 1, 1) :: [Rational])
+
+let patscale = jmat2 (3, 2, 2) (7, 1, 1) 
+in
+d1
+$ fast (1/(8*2))
+$ stutWith 13 (1/32)
+(
+(|* sus 1.00)
+.
+(|* note (choose [(8/7), 1]))
+)
+$ jtransup 100
+$ note (jtoScale patscale "{0*2 38*5 30*3 3*2 8*3}%8")
+# s "stringtest"
+# sus 2.5
+# envcurve 3
+# gain 0.8
+# pan (shrand 3)
+# tuning 0
+# fmamt 4
+# detune (range 0.999 1.001 $ shrand 6)
+
+
+let revpat = (segment 1 $ rangex 000.6 000.9 $ shrand 8)
+in
+d3
+$ room revpat
+# size 04.20
+
+hush
+
+d4
+$ leslie (segment (8/2) $ "1.0")
+# lrate (rangex 0.5 03.5 $ shrand 4)
+# lsize (rangex (1) 003 $ shrand 5)

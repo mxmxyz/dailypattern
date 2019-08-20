@@ -1,0 +1,16 @@
+setcps 0.07
+
+let speed = 32
+in
+d1
+$ fast speed
+$ cat [
+stack [ note 036 , note 64 ] # tuning 12
+,
+stack [ note 110 , note (110*5)] # tuning 0
+]
+# s "tunesaw"
+# sus (12.0 / speed)
+# gain 1.5
+# lopf (880*4)
+# lopq 0.85
