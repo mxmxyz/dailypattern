@@ -1,0 +1,24 @@
+d1 $ fast 16 $ cps 0.675
+
+d2
+$ stutWith 8 (21/20)
+(
+(|+ note "{2400 20 50 1400 8 4 0 1000}%14")
+.
+(|* fmamt "1.00")
+.
+(|* fmfreq "1.000")
+.
+(|> pan (shrand 4))
+)
+$ note (fast ("<2000>" /100) $ fromList (take (2400*8) [1..]))
+# s "stringtest"
+# gain "0.9"
+# sus "0.30"
+# tuning "2400"
+# fmamt "10"
+# fmfreq "4"
+# pan (shrand 3)
+# envcurve "6"
+# upbound (2400*5)
+# lobound (2400*1.0)

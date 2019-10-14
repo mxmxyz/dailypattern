@@ -1,0 +1,10 @@
+d1
+$ stutWith 12 (1/32)
+(
+(|+ up 7)
+.
+(degBy 0.3) 
+)
+$ fast 4
+$ cat  (scanl fastAppend (up "0 12") (replicate 12 (up "{3 24 7}%8")))
+# sound "gabbalouder"

@@ -1,14 +1,14 @@
-let matrix = (jmat2 ((3/2), 11, 0) ((7/4), 0, 0))
+let matrix = jmat2 (3, 2, 1) (7, 1, 1)
 in
 d1
+$ fast 3
+$ (|* note (1/16))
 $ (|* note 075)
-$ note (jtoScale' (2) matrix (segment 1 (irand ((length matrix) * 4))))
+$ note (jtoScale' (2) matrix (segment 1 (irand ((length matrix) * 7))))
 # s "plush"
 # sus 10.7
-# envcurve 0.5
-# gain 0.60
+# envcurve 8.5
+# gain (choose (map (2^) [1..6]))
 # pan (shrand 2)
 # tuning 0
-# attpercent 0.4
-
-setcps 0.35
+# attpercent 0.6

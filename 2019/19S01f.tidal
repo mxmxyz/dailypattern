@@ -1,0 +1,23 @@
+let panpat = (fast ((rand) * 8) $ square)
+in
+d1
+$ stutWith 14 (1/32)
+(
+(|+ note (choose [31,53,22,0.1]))
+.
+(degBy 0.1) 
+.
+(slow 2)
+)
+$ transup 180
+$ fast 1
+$ cat  (scanl fastAppend (note "0 53") (replicate 12 (note "{9 106 31}%8")))
+# sound "stringtest"
+# pan panpat
+# fmfreq 1
+# fmamt (6/1)
+# sus 0.4
+# envcurve 8
+# tuning 53
+# upbound 450
+# lobound 100
