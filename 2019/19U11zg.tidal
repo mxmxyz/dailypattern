@@ -1,0 +1,19 @@
+setcps 0.6
+
+let mosnotes = 6
+    moscale = (mos mosnotes 31 53)
+in
+d1  
+$ transup 200
+$ inside (11/4) (spaceOut [1,1,1,1])
+$ note (toScale' 53 (sort moscale) (stutWith 6 ("{0 0.03 3}%20"/20) (+ "2") (segment 20 $ irand (mosnotes*3))))
+# s "stringtest"
+# envcurve "8"
+# sus "0.20"
+# gain 1.2
+# tuning 53
+# fmfreq 0.25
+# fmamt 2.0
+# upbound 410
+# lobound (410-212)
+# pan (fast 10 $ square)

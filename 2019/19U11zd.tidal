@@ -1,0 +1,31 @@
+setcps 0.4
+
+let mosnotes = 7
+    mospat = (mos mosnotes 24 53)
+in
+d1  
+$ arpeggiate
+$ inside (1/1) 
+(stutWith 8 ((fmap (*mosnotes) (fromList $ [0,0,1,2,3]))/20)
+(
+(|+ note "{106 0 53}%10")
+.
+(|* sus 0.95)
+.
+(|* fmamt 1.10)
+.
+(|+ pan (1/4))
+))
+$ transup 250
+$ note (fast 10 $ fromList mospat)
+# s "stringtest"
+# envcurve "6"
+# sus "0.20"
+# gain 1.2
+# tuning 53
+# fmfreq 0.25
+# fmamt 2.0
+# upbound 410
+# lobound (410-212)
+# pan (fast 10 $ square)
+

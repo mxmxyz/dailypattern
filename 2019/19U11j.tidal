@@ -1,0 +1,25 @@
+setcps 0.8
+
+let mosnotes = 11
+    mospat = (mos mosnotes 13 53)
+in
+d1  
+$ stutWith 9 (mosnotes/1)
+(
+(|+ note "{53 31 222 2 0}%20")
+.
+(|* sus 0.95)
+.
+(|* fmamt 1.15)
+)
+$ transup 180
+$ note (fast 20 $ fromList mospat)
+# s "stringtest"
+# envcurve "8"
+# sus "0.15"
+# gain 1.2
+# tuning 53
+# fmfreq 1.0
+# fmamt 2.0
+# upbound 400
+# lobound 150

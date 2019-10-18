@@ -1,0 +1,20 @@
+let mospat = (mos 9 31 53)
+in
+d1  
+$ stutWith 6 (1.000/2)
+(
+(|+ note 31)
+.
+(|* envcurve 1.2)
+.
+(|* fmamt 1.05)
+)
+$ transup 200
+$ note (fast 20 $ fromList mospat)
+# s "stringtest"
+# envcurve "6"
+# sus "0.2"
+# gain 1.2
+# tuning 53
+# fmfreq 1.0
+# fmamt 2.5
