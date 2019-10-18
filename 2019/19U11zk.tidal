@@ -1,0 +1,6 @@
+setcps 0.2
+
+let minterval = 22
+    msteps = 53
+in
+d1 $ struct (fmap (< minterval) (fast 53 $ fromList (mos msteps minterval msteps))) (sound "bd")

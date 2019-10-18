@@ -1,0 +1,27 @@
+setcps 0.15
+
+let mosnotes = 7
+    moscale = (mos mosnotes 31.1 53)
+    pat = (toScale' 53 (sort moscale) (stutWith 6 ("{0 0.23 3}%20"/20) (+ "3") (segment 20 $ irand (mosnotes*3))))
+in
+d1  
+$ transup 200
+$ stack
+[inside (7/2) (spaceOut [1,1,1,1]) $ note pat
+,
+fast 3 $ (|* sus 0.3) $ (|+ note 53) $ note pat
+,
+note pat
+,
+(|- lobound 53) $ transdown 53 $ slow 2 $ note pat
+]
+# s "stringtest"
+# envcurve "6"
+# sus "0.25"
+# gain 1.0
+# tuning 53
+# fmfreq 0.5
+# fmamt 1.0
+# upbound 410
+# lobound (410-212)
+# pan rand
