@@ -1,0 +1,19 @@
+setcps 0.65
+
+let linterval = 101
+    lhits = 71
+    lsteps = 1331
+    rinterval = 103
+    rhits = 67
+    rsteps = 1307
+in
+d1 $ ply "<2 6 5 3 4>" $ arpeggiate $ stutWith 30 ("<3 4 9 11 1 31 5>"/20) ((|* speed 1.2) . (|* gain 1.1) . (|+ n 1))
+$ degBy 0.7
+$ stack [ 
+sound (struct (fast 20 $ makeStruct lsteps (mos lhits linterval lsteps)) "hardkick:3") # pan 0
+,
+sound  (struct (fast 20 $ makeStruct rsteps (mos rhits rinterval rsteps)) "hardkick:3") # pan 1
+]
+# n (irand 12)
+# rel 0.10
+# shape 0.99

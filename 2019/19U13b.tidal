@@ -1,0 +1,20 @@
+setcps 0.65
+
+let linterval = 31
+    lhits = 93
+    lsteps = 128	
+    rinterval = 41
+    rhits = 91
+    rsteps = 128
+in
+d1 $ stutWith 7 (0.000/32) ((|* speed 1.9) . (|* gain 0.95) . (|+ resonance "0.05") . (|* lpf 1.2))
+$ stack [ 
+sound (struct (fast 20 $ makeStruct lsteps (mos lhits linterval lsteps)) "hardkick:3") # pan 0
+,
+sound  (struct (fast 20 $ makeStruct rsteps (mos rhits rinterval rsteps)) "hardkick:3") # pan 1
+]
+# n (irand 12)
+# rel 0.6
+# shape 0.99
+# lpf (range 2000 16000 $ rand)	
+# resonance 0.1
