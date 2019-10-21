@@ -1,4 +1,4 @@
-let mospat = (mos 9 33 53)
+let mospat = map fromIntegral (mos 9 33 53)
 in
 d1  
 $ stutWith 6 (1.000/2)

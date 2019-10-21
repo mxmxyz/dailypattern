@@ -1,7 +1,7 @@
 setcps 0.15
 
 let mosnotes = 7
-    moscale = (mos mosnotes 31.1 53)
+    moscale = map fromIntegral (mos mosnotes 31 53)
     pat = (toScale' 53 (sort moscale) (stutWith 6 ("{0 0.23 3}%20"/20) (+ "3") (segment 20 $ irand (mosnotes*3))))
 in
 d1  

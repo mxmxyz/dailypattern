@@ -1,7 +1,7 @@
 setcps 0.8
 
 let mosnotes = 12
-    mospat = (mos mosnotes 9 53)
+    mospat = map fromIntegral (mos mosnotes 9 53)
 in
 d1  
 $ stutWith 11 (mosnotes/40)

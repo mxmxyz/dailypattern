@@ -8,7 +8,7 @@ $ stutWith 6 (1.003/2)
 (|* fmamt 1.05)
 )
 $ transup 200
-$ note (fast 20 $ fromList (mos 7 31 53))
+$ note (fast 20 $ fromList $ map fromIntegral (mos 7 31 53))
 # s "stringtest"
 # envcurve "6"
 # sus "0.2"

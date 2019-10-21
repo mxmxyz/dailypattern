@@ -2,7 +2,7 @@ d1
 $ stutWith 2 (1/2)
 (|+ note 22)
 $ transup 200
-$ note (fast 20 $ fromList (mos 5 31 53))
+$ note (fast 20 $ fromList $ map fromIntegral (mos 5 31 53))
 # s "stringtest"
 # envcurve "4"
 # sus "0.2"

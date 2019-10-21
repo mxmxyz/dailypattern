@@ -1,7 +1,7 @@
 setcps 0.6
 
 let mosnotes = 6
-    moscale = (mos mosnotes 31 53)
+    moscale = map fromIntegral (mos mosnotes 31 53)
 in
 d1  
 $ transup 200

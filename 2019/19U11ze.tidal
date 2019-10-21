@@ -1,7 +1,7 @@
 setcps 0.4
 
 let mosnotes = 11
-    mospat = (mos mosnotes 25 53)
+    mospat = map fromIntegral (mos mosnotes 25 53)
 in
 d1  
 $ arpeggiate
