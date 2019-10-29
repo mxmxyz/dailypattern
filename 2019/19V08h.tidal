@@ -1,0 +1,36 @@
+setcps 0.20
+>>
+(
+d1
+$ superLayer (fmap (/22) irand 61) "8 16"
+$ arpeggiate
+$ stutWith 16 (1/32) (|+ note 31)
+$ transdown 100
+$ note "197*8"
+# s "stringtest"
+# tuning "53"
+# sus "0.4"
+# envcurve 12
+# attpercent 0.01
+# gain 0.9
+# pan 0 
+# pitchval 2.00
+# pitchenv 0.15
+)
+>>
+(
+d2
+$ superLayer (fmap (/22) irand 60) "<16 24 8>"
+$ stutWith 6 (1/8) (|+ note 31)
+$ transdown 100
+$ note "250*16"
+# s "stringtest"
+# tuning "53"
+# sus "0.4"
+# envcurve 8
+# attpercent 0.01
+# gain 0.9
+# pan 1
+# pitchval 1.00
+# pitchenv 0.15
+)
