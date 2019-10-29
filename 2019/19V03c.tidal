@@ -1,0 +1,37 @@
+d1 $ fast 16 $ cps 0.10
+
+let super = choose (map (/1000) [15,20,1,2])
+in
+d2
+$ superimpose (
+(|+ detune super)
+. (
+superimpose
+(|+ detune (1*super))
+))
+$ ( #pan (fast ((2^4) *3) $ square))
+$ ply 1
+$ arpeggiate
+$ fast (16)
+$ slow (2/1)
+$ whenmod 5 5 (# cut "1")
+$ degradeBy 0.05
+$ slow (16*2)
+$ inside (1*4*2*4) (spaceOut (replicate 10 1))
+$ fast 1
+$ stutWith 16 (1/(8*1*4*2))
+(|+ note "{54 3 66 19 0 52 106}%4")
+.
+(|+ detune (range (-0.01) 0.01 $ rand))
+.
+(# pan (shrand 3))
+$ note "{40*1 73*1 97*1 120*1 113*1}%32"
+# s "tunesaw"
+# sus "{0.05}%32"
+# tuning "53.00"
+# upbound "350"
+# lobound (350-(53*4))
+# cut "0"
+# detune "1"
+# gain "0.5"
+# pan (shrand 2)

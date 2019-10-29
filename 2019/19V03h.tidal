@@ -1,0 +1,36 @@
+d1 $ cps (segment 16 $ slow 3 $ range 0.6 0.8 $ saw)
+
+d2
+$ fast 16
+$ (# pan (shrand 5))
+$ inside (4/1) (whenmod 14 14 (# cut "1"))
+$ inside 1 (spaceOut (replicate 8 1 ++ replicate 0 0.25))
+$ slow 4
+$ stutWith 12 (1/(4*1*4*2))
+(
+(|+ note (slow 1.331 $ range 03.0 03.5 $ saw))
+.
+(|* sus (choose [0.99, 0.69, 0.98]))
+.
+(|* ringfreq (choose [1,2,001]))
+.
+(|> pan (shrand 6))
+.
+(|* ringenv 1.0)
+.
+(|* gain 1.10)
+)
+$ note "{48 53 51 50 58 55 60}%2"
+# s "supersaw"
+# sus "{2.02 0.65}%16"
+# gain "4.85"
+# lopf (fast 32 $ rangex 0300 48000 $ rand)
+# lopq "1.221"
+# ringmod "0.95"
+# ringfreq "0.5"
+# ringenv "100"
+# lobound "64"
+# upbound "068"
+# shaped "0.55"
+
+hush

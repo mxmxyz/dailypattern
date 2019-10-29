@@ -1,0 +1,42 @@
+setcps 0.04
+
+let pat = "1(<13 14 16 19>,30,<0 2 5>)"
+in
+d2
+$ arpeggiate
+$ fast 1
+$ inside (1/1) (stutWith 13 (1/5)
+((|+ note "{0 53 0.1 9 0.3 106}%3")
+.
+(|* gain 0.98)
+.
+(|* fmamt 1.05)
+))
+$ superimpose ((shiftr (12/1)) . (transdown 53) . (|* fmamt "6"))
+$ transup 250
+$ stack
+[
+note (struct pat $ "{31 22}%10")
+,
+note (struct (inv pat) $ 0)
+]
+# s "stringtest"
+# fmamt (choose (map (*0.25) [2,3,4,6,16,1]))
+# fmfreq (choose (map (*0.25) [1,2,4,8,16]))
+# gain "1.09"
+# stack
+[
+sus (struct pat $ "<0.7 0.25>")
+,
+sus (struct (inv pat) $ "<0.25 0.7>")
+]
+# envcurve "6"
+# tuning 53
+# stack
+[
+pan (struct pat $ 1)
+,
+pan (struct (inv pat) $ 0)
+]
+# upbound "300"
+# lobound (300-(53*4))
