@@ -1,0 +1,17 @@
+d1
+$ slow 4
+$ jsuperLayer (16/8) 2
+$ stutWith 3 0 (jtransup (choose [3/2, 3/2, 11/8, 2, 2]) . slow (3/2) . (|* sus (5/4)) . (|* gain 0.9))
+$ note (fast 8 $ jtoScale (map (80*) [1, (12/11), (5/4), (4/3), (11/8), (3/2)]) (segment 1 $ irand 21))
+# s "stringtest"
+# tuning 0
+# gain "<1.1 2.05!7>*8" 
+# sus 1.5
+# fmamt 1
+# fmfreq 1
+# pan rand
+# attpercent "0.8!3 0.1"
+# envcurve 1
+# smear (1 -(rangex 0.01 0.9 $ shrand 3))
+
+setcps 0.4

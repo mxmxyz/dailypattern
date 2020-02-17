@@ -1,0 +1,21 @@
+let n = 6
+    pat = fast n $ fromList $ tribonacci 13
+in
+d1
+$ inside (4/3) (spaceOut (fmap (*2) $ jmat2 (3,2,1) (5,1,0)))
+$ ply (choose [3,2,1,8])
+$ superLayer 12 10
+$ degBy 0.05
+$ stutWith 6 (1/(n*2)) ((|* speed 1) . (|* gain 0.99))
+$ stack
+[
+struct (fmap (== 0) pat) $ sound "gabba"
+,
+struct (fmap (== 1) pat) $ sound "gabba:8" 
+,
+struct (fmap (== 2) pat) $ sound "gabba:3" 
+]
+# pan (fast n $ fmap fromIntegral $ fmap truthInt $ thuemorsepat 20)
+# gain 1.3
+
+

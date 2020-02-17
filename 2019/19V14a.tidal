@@ -1,0 +1,14 @@
+let n = 4
+    pat = fast n $ fromList $ tribonacci 15
+in
+d1
+$ ply (choose [3,2,1])
+$ stutWith 8 (2/(n*1)) ((|* speed 2) . (|* gain 0.99))
+$ stack
+[
+struct (fmap (== 0) pat) $ sound "gabba"
+,
+struct (fmap (== 1) pat) $ sound "bd" # shape 0.4
+,
+struct (fmap (== 2) pat) $ sound "sn" # shape 0.5 # speed 1
+]

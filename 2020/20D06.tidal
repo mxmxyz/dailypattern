@@ -1,0 +1,27 @@
+d1
+$ fast "<[1 2]!4 1>*4"
+-- $ transup "<0 0 3.5 5>"
+$ stutWith 19 (0/16) (
+(|+ note "<0.05 1 0.25>*5")
+.
+(|* depth (choose [1.0,1.05]))
+.
+(|* rel 0.9)
+)
+$ note "40!2 28*2!6"
+# tuning 12
+# s "xenharp"
+# depth 0001
+# atk 0.005
+# rel 02.5
+# upbound 096
+# lobound 20
+# gain 1.1
+# scr 0.9
+# scry 0.082
+# smooth 8
+
+hush
+
+setcps 0.30
+
