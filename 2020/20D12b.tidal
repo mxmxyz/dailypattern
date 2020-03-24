@@ -1,0 +1,27 @@
+d1
+$ ply 1
+$ stutWith 16 (0/8)
+(
+(|+ note (choose [7,12,0]))
+-- .
+-- (|* sus 0.75)
+.
+(|* noise 0.97)
+)
+$ note "<21 20>*8"
+# tuning 12
+# s "febsaw"
+# lopf (choose [8,4,16])
+# lopq 0.25
+# sus 0.25
+# attpercent 0.05
+# envcurve 4
+# gain 0.7
+# noise (rand)
+# upbound "80"
+# lobound (80 - (12*4))
+# pan (shrand 5)
+
+setcps 0.55
+
+hush

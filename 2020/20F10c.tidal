@@ -1,0 +1,27 @@
+d1
+$ plyWith 2 (transdown 31)
+$ stutWith 12 (1/16)
+(
+transup 9
+.
+(|* sus 0.9625)
+.
+(|> pan (shrand 2))
+.
+(|* gain 0.90)
+)
+$ transdown "<0 53>*3"
+$ superLayer 2 (-(53/2))
+$ struct "1(11,32)" 
+$ note "<300 247 313 322 331>"
+# s "stringtest"
+# tuning "53"
+# sus "1.45"
+# envcurve 1
+# attpercent 0.8
+# fmamt "<10!2 2 5 1>*11"
+# fmfreq (1/2)
+# pan rand
+# gain 0.9
+
+setcps 0.10

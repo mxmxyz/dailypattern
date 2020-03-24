@@ -1,0 +1,25 @@
+d1
+$ plyWith 5 (transdown 9)
+$ superLayer 5 (-1/ fmap (/16) "<4 8 2 5 1>")
+$ transdown 00
+$ stutWith 6 (1/"<12 8 10 16>")
+(
+(transup 52)
+.
+(|* gain 0.98)
+.
+(|* sus 0.99)
+)
+$ fast 1
+$ note "200@q 244@h 266@h 253@h 222@s"
+# s "stringtest"
+# tuning "53"
+# sus "0.4"
+# envcurve "6"
+# gain 1.0
+# tanhdist 08.5
+# panr 0
+
+setcps 0.30
+
+hush

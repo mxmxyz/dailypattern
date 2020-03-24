@@ -1,0 +1,24 @@
+d1
+$ plyWith 12 ((|* fmamt 1.2) . (transdown 0.5))
+$ transdown 53
+$ stutWith 4 (1/6)
+(
+transup 31
+.
+(|* gain 0.95)
+.
+(|* fmamt (choose [0.5, 1, 2]))
+)
+$ note "200 [231 222]@q 253@s 262@t"
+# tuning 53
+# s "stringtest"
+# fmamt (choose (fmap (/2) [2..8]))
+# fmfreq 1
+# gain 1.0
+# tanhdist 008
+# sus 0.2
+# envcurve 4
+# attpercent 0.01
+# panr 0
+
+setcps 0.35
